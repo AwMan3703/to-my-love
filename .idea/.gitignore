@@ -3,3 +3,10 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/.name
+/codeStyles/codeStyleConfig.xml
+/modules.xml
+/to my love.iml
+/vcs.xml
+/watcherTasks.xml
+/webResources.xml
