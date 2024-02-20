@@ -5,7 +5,19 @@ const body = document.getElementById(prefix + "body")
 const inside = document.getElementById(prefix + "inside")
 const stamps = document.getElementById(prefix + "stamps")
 
-let randomizationData;
+const randomize = (data) => {
+    const envelopePath = "assets/envelope"
+    const stampsPath = `assets/stamps/`
+    const envelopeN = randInt(1, data.ranges.envelopes)
+    const stampsN = randInt(1, data.ranges.stamps)
+    inside.src = envelopePath + envelopeN + "/inside.png"
+    body.src = envelopePath + envelopeN + "/body.png"
+    flap.src = envelopePath + envelopeN + "/flap.png"
+    stamps.src = stampsPath + stampsN + ".png"
+
+    console.log(`envelope randomization complete (envelope ${envelopeN}, stamps ${stampsN})`)
+}
+
 fetch('../data/envelopeRandomization.json')
     .then(response => {
         if (!response.ok) {
@@ -14,26 +26,9 @@ fetch('../data/envelopeRandomization.json')
         return response.json();
     })
     .then(data => {
-        randomizationData = data;
-        console.log(randomizationData);
+        randomize(data);
+        console.log(data);
     })
     .catch(error => {
-        console.error('Error fetching randomization data:', error);
+        console.error('Error fetching data:', error);
     });
-console.log(randomizationData);
-
-
-const randomize = () => {
-    const envelopePath = "assets/envelope"
-    const stampsPath = `assets/stamps/`
-    const envelopeN = randInt(1, 1)
-    const stampsN = randInt(1, 1)
-    inside.src = envelopePath + envelopeN + "/inside.png"
-    body.src = envelopePath + envelopeN + "/body.png"
-    flap.src = envelopePath + envelopeN + "/flap.png"
-    stamps.src = stampsPath + stampsN + ".png"
-
-    console.log("envelope randomization complete")
-}
-
-randomize()
