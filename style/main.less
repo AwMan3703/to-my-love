@@ -1,5 +1,5 @@
 
-@envelope-height: 30dvh;
+@envelope-height: 45dvh;
 
 * {
   max-width: 100%;
@@ -24,8 +24,11 @@ body {
 
 #randomEnvelope-envelope {
   &:extend(.fixed-parent);
+  bottom: 0;
   height: @envelope-height;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 #randomEnvelope-envelope * {
   &:extend(.fixed-child);
