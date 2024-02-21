@@ -28,6 +28,7 @@ fetch('../data/envelopeRandomization.json')
     })
     .then(data => {
         randomize(data)
+        envelope.style.transform = ""; // Show the envelope
     })
     .catch(error => {
         console.error('Error fetching data:', error)
