@@ -9,7 +9,7 @@ const randomize = (data) => {
     const envelopePath = "assets/envelope"
     const stampsPath = `assets/stamps/`
     const envelopeN = randInt(1, data.ranges.envelopes)
-    const stampsN = randInt(1, data.ranges.stamps)
+    const stampsN = randInt(2, data.ranges.stamps) // start from 2 because stamps/1.png is reserved to detect failed randomization
     inside.src = envelopePath + envelopeN + "/inside.png"
     body.src = envelopePath + envelopeN + "/body.png"
     flap.src = envelopePath + envelopeN + "/flap.png"
