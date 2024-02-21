@@ -22,14 +22,14 @@ const randomize = (data) => {
 fetch('../data/envelopeRandomization.json')
     .then(response => {
         if (!response.ok) {
-            throw new Error('Failed to fetch data');
+            throw new Error('Failed to fetch data')
         }
-        return response.json();
+        return response.json()
     })
     .then(data => {
-        randomize(data);
-        console.log(data);
+        randomize(data)
+        envelope.style.visibility = "visible"
     })
     .catch(error => {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching data:', error)
     });
