@@ -3,7 +3,7 @@ const prefix = "randomEnvelope-"
 const envelope = document.getElementById(prefix + "envelope")
 const inside = document.getElementById(prefix + "inside")
 const body = document.getElementById(prefix + "body")
-const inside = document.getElementById(prefix + "inside")
+const flap = document.getElementById(prefix + "flap")
 const stamps = document.getElementById(prefix + "stamps")
 
 const randomize = (data) => {
