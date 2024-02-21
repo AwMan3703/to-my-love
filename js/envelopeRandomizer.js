@@ -16,7 +16,7 @@ const randomize = (data) => {
     flap.src = envelopePath + envelopeN + "/flap.png"
     stamps.src = stampsPath + stampsN + ".png"
 
-    console.log(`envelope randomization complete (envelope ${envelopeN}, stamps ${stampsN})`)
+    console.log(`envelope randomization complete (envelope #${envelopeN}, stamps #${stampsN})`)
 }
 
 fetch('../data/envelopeRandomization.json')
@@ -28,7 +28,6 @@ fetch('../data/envelopeRandomization.json')
     })
     .then(data => {
         randomize(data)
-        envelope.style.visibility = "visible"
     })
     .catch(error => {
         console.error('Error fetching data:', error)
