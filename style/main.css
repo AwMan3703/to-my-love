@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 #randomEnvelope-envelope {
-  height: 45dvh;
+  height: calc(35dvh + 10dvh);
   bottom: 0;
   width: 100%;
   display: flex;
@@ -15,7 +15,7 @@ body {
   transition: all ease-in-out 0.2s;
 }
 #randomEnvelope-envelope * {
-  height: 45dvh;
+  height: 35dvh;
 }
 #randomEnvelope-envelope:has(*:hover) {
   scale: 1.01 1.01;
