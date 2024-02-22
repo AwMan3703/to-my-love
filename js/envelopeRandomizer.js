@@ -20,12 +20,12 @@ const animation_phase2 = () => {
     envelope.addEventListener("animationend", animation_phase3)
 }
 const animation_phase3 = () => {
-    front.style.visibility = "hidden"
-    stamps.style.visibility = "hidden"
-
     inside.style.visibility = "visible"
     body.style.visibility = "visible"
     flap.style.visibility = "visible"
+
+    front.style.visibility = "hidden"
+    stamps.style.visibility = "hidden"
 
     envelope.style.animationTimingFunction = "ease-out"
     envelope.style.animationName = "letter-reveal-3"
