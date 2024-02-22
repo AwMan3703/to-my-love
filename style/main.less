@@ -11,17 +11,26 @@ body {
 
 #randomEnvelope-envelope {
   &:extend(.fixed-parent);
-  bottom: 0;
   height: @envelope-height;
+
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
 
-  transition: transform ease-in-out .5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: all ease-in-out .2s;
 }
 #randomEnvelope-envelope * {
   &:extend(.fixed-child);
   height: @envelope-height;
+}
+#randomEnvelope-envelope:has(*:hover) {
+  scale: 1.01 1.01;
+}
+#randomEnvelope-envelope:has(*:active) {
+  scale: 0.99 0.99;
 }
 
 #randomEnvelope-inside {

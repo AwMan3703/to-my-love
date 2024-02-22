@@ -5,15 +5,23 @@ body {
   margin: 0;
 }
 #randomEnvelope-envelope {
-  bottom: 0;
   height: 45dvh;
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  transition: transform ease-in-out 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: all ease-in-out 0.2s;
 }
 #randomEnvelope-envelope * {
   height: 45dvh;
+}
+#randomEnvelope-envelope:has(*:hover) {
+  scale: 1.01 1.01;
+}
+#randomEnvelope-envelope:has(*:active) {
+  scale: 0.99 0.99;
 }
 #randomEnvelope-inside {
   filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
