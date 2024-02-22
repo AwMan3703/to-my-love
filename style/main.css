@@ -10,7 +10,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transition: all ease-in-out 0.2s;
 }

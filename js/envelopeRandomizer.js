@@ -1,6 +1,7 @@
 
 const prefix = "randomEnvelope-"
 const envelope = document.getElementById(prefix + "envelope")
+const front = document.getElementById(prefix + "front")
 const inside = document.getElementById(prefix + "inside")
 const body = document.getElementById(prefix + "body")
 const flap = document.getElementById(prefix + "flap")
