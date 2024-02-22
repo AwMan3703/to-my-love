@@ -23,7 +23,8 @@ body {
 #randomEnvelope-envelope:has(*:active) {
   scale: 0.99 0.99;
 }
-#randomEnvelope-inside {
+#randomEnvelope-inside,
+#randomEnvelope-front {
   filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
 }
 .fixed-parent,
