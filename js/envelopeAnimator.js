@@ -21,9 +21,16 @@ const animation_phase3 = () => {
     envelope.style.animationTimingFunction = "ease-out"
     envelope.style.animationName = "letter-reveal-3"
 
+    envelope.addEventListener("animationend", animation_phase4)
+}
+const animation_phase4 = () => {
+    flap.style.transform = "scaleY(-100%)"
+    flap.style.filter = "contrast(0.5)"
+
     envelope.removeEventListener("load", animation_phase1)
     envelope.removeEventListener("click", animation_phase2)
     envelope.removeEventListener("animationend", animation_phase3)
+    envelope.removeEventListener("animationend", animation_phase4)
 }
 
 function animateEnvelope(envelopeN, stampsN) {
