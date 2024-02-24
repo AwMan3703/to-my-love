@@ -28,6 +28,11 @@ const animation_phase4 = () => {
     flap.style.transform = "scaleY(-100%)"
     flap.style.filter = "contrast(0.5)"
 
+    letter.style.height = "200%"
+    letter.style.translate = "0 -40%"
+
+    envelope.style.translate = "0 50%"
+
     envelope.removeEventListener("load", animation_phase1)
     envelope.removeEventListener("click", animation_phase2)
     envelope.removeEventListener("animationend", animation_phase3)
