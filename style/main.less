@@ -1,5 +1,7 @@
 
-@envelope-height: 35dvh;
+@envelope-width: 3156px;
+@envelope-height: 1886px;
+@envelope-aspectRatio: 3156 / 1886;
 
 * {
   max-width: 100%;
@@ -9,14 +11,22 @@ body {
   margin: 0;
 }
 
-#randomEnvelope-envelope {
-  &:extend(.fixed-parent);
-  height: calc(@envelope-height + 10dvh);
-
-  bottom: 0;
+#randomEnvelope-envelopeWrapper {
+  position: fixed;
+  bottom: -60px;
+  height: 35dvh ;
   width: 100%;
+
   display: flex;
   justify-content: center;
+
+  transition: all ease-in-out 1s;
+}
+#randomEnvelope-envelope {
+  &:extend(.fixed-parent);
+
+  aspect-ratio: @envelope-aspectRatio;
+  height: inherit;
 
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -24,7 +34,7 @@ body {
 }
 #randomEnvelope-envelope * {
   &:extend(.fixed-child);
-  height: @envelope-height;
+  object-fit: contain;
 }
 #randomEnvelope-envelope:has(*:hover) {
   scale: 1.01 1.01;

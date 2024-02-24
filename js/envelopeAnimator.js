@@ -1,5 +1,6 @@
 const animation_phase1 = () => {
     envelope.style.animationName = "letter-reveal-1"
+    envelopeWrapper.style.bottom = "60px"
 
     envelope.addEventListener("click", animation_phase2)
 }
