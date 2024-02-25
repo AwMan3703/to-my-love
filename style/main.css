@@ -4,6 +4,7 @@
 body {
   margin: 0;
 }
+/* FIXME: ENVELOPE NOT DISPLAYING */
 #randomEnvelope-envelopeWrapper {
   position: fixed;
   bottom: -60px;
