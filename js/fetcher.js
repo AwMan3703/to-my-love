@@ -1,5 +1,5 @@
 
-function fetchme(url, callback) {
+function fetchjson(url, callback) {
     fetch(url)
         .then(response => {
             if (!response.ok) {

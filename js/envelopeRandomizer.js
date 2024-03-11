@@ -25,7 +25,7 @@ const randomizeEnvelope = (data) => {
     console.log(`envelope randomization complete (envelope #${envelopeN}, stamps #${stampsN})`)
 }
 
-fetchme("../data/envelopeRandomization.json", (data) => {
+fetchjson("../data/envelopeRandomization.json", (data) => {
     randomizeEnvelope(data)
     envelope.style.transform = ""; // Show the envelope
 })
