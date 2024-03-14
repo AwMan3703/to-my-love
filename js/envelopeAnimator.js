@@ -25,6 +25,8 @@ const animation_phase3 = () => {
     envelope.addEventListener("animationend", animation_phase4)
 }
 const animation_phase4 = () => {
+    envelopeLevelBack.appendChild(flap)
+
     flap.style.transform = "scaleY(-100%)"
     flap.style.filter = "contrast(0.5)"
 

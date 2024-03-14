@@ -1,6 +1,8 @@
 
 const prefix = "randomEnvelope-"
 const envelopeWrapper = document.getElementById(prefix + "envelopeWrapper")
+const envelopeLevelFront = document.getElementById(prefix + "level-front")
+const envelopeLevelBack = document.getElementById(prefix + "level-back")
 const envelope = document.getElementById(prefix + "envelope")
 const letter = document.getElementById("letter")
 const front = document.getElementById(prefix + "front")

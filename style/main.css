@@ -21,7 +21,7 @@ body {
   animation-fill-mode: forwards;
   transition: all ease-in-out 0.2s;
 }
-#randomEnvelope-envelope * {
+#randomEnvelope-envelope * * {
   object-fit: contain;
 }
 #randomEnvelope-envelope:has(*:hover) {
@@ -53,7 +53,7 @@ body {
   position: fixed;
 }
 .fixed-child,
-#randomEnvelope-envelope * {
+#randomEnvelope-envelope * * {
   position: absolute;
 }
 /*# sourceMappingURL=main.css.map */
