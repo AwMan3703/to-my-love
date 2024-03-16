@@ -9,9 +9,22 @@
 
 body {
   margin: 0;
+  background-color: #391e3b;
+  background-image: radial-gradient(#321b33, #492a42);
 }
 
-/* FIXME: ENVELOPE NOT DISPLAYING */
+#background-main {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -10;
+
+  background-image: radial-gradient(#e78ad8, #883981);
+  opacity: 0;
+  transition: opacity .8s ease-out;
+}
+#background-main.lights-on { opacity: 1 }
 
 #randomEnvelope-envelopeWrapper {
   position: fixed;
@@ -22,7 +35,7 @@ body {
   display: flex;
   justify-content: center;
 
-  transition: all ease-in-out 1s;
+  transition: all ease-out 1s;
 }
 #randomEnvelope-envelope {
   &:extend(.fixed-parent);
@@ -32,7 +45,7 @@ body {
 
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  transition: all ease-in-out .2s;
+  transition: all ease-out .2s;
 }
 #randomEnvelope-envelope * * {
   &:extend(.fixed-child);
@@ -58,6 +71,7 @@ body {
   height: 75%;
   transition: all ease-in-out .3s;
   background-color: aliceblue;
+  border-radius: 5px;
 
   position: fixed !important;
   bottom: 0;
