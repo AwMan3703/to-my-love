@@ -42,6 +42,8 @@ const animation_phase4 = () => {
 }
 
 function animateEnvelope(envelopeN, stampsN) {
+    envelope.style.transform = ""; // Show the envelope
+
     inside.style.visibility = "hidden"
     body.style.visibility = "hidden"
     flap.style.visibility = "hidden"
@@ -49,5 +51,4 @@ function animateEnvelope(envelopeN, stampsN) {
     front.src = envelopePath + envelopeN + "/front.png"
     stamps.addEventListener("load", animation_phase1)
     stamps.src = stampsPath + stampsN + ".png"
-
 }

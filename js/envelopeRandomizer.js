@@ -22,12 +22,11 @@ const randomizeEnvelope = (data) => {
     body.src = envelopePath + envelopeN + "/body.png"
     flap.src = envelopePath + envelopeN + "/flap.png"
 
-    animateEnvelope(envelopeN, stampsN)
-
     console.log(`envelope randomization complete (envelope #${envelopeN}, stamps #${stampsN})`)
+    return { envelopeN, stampsN }
 }
 
 fetchjson("../data/envelopeRandomization.json", (data) => {
-    randomizeEnvelope(data)
-    envelope.style.transform = ""; // Show the envelope
+    const randData = randomizeEnvelope(data)
+    animateEnvelope(randData.envelopeN, randData.stampsN)
 })
