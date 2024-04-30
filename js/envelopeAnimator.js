@@ -31,9 +31,11 @@ const animation_phase4 = () => {
     flap.style.filter = "contrast(0.5)"
 
     letter.style.height = "200%"
-    letter.style.translate = "0 -40%"
+    letter.style.translate = "0 -90%"
 
     envelope.style.translate = "0 50%"
+
+    document.getElementById('background-main').classList.add('lights-on')
 
     envelope.removeEventListener("load", animation_phase1)
     envelope.removeEventListener("click", animation_phase2)
@@ -42,6 +44,8 @@ const animation_phase4 = () => {
 }
 
 function animateEnvelope(envelopeN, stampsN) {
+    envelope.style.transform = ""; // Show the envelope
+
     inside.style.visibility = "hidden"
     body.style.visibility = "hidden"
     flap.style.visibility = "hidden"
@@ -49,5 +53,4 @@ function animateEnvelope(envelopeN, stampsN) {
     front.src = envelopePath + envelopeN + "/front.png"
     stamps.addEventListener("load", animation_phase1)
     stamps.src = stampsPath + stampsN + ".png"
-
 }

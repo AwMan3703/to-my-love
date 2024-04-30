@@ -9,8 +9,27 @@
 
 body {
   margin: 0;
-  background-color: #050115;
+  background-color: #391e3b;
+  background-image: radial-gradient(#321b33, #492a42);
 }
+
+iframe {
+  border: 0;
+  background-color: transparent;
+}
+
+#background-main {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -10;
+
+  background-image: radial-gradient(#e78ad8, #883981);
+  opacity: 0;
+  transition: opacity .8s ease-out;
+}
+#background-main.lights-on { opacity: 1 }
 
 #randomEnvelope-envelopeWrapper {
   position: fixed;
@@ -21,7 +40,7 @@ body {
   display: flex;
   justify-content: center;
 
-  transition: all ease-in-out 1s;
+  transition: all ease-out 1s;
 }
 #randomEnvelope-envelope {
   &:extend(.fixed-parent);
@@ -31,7 +50,7 @@ body {
 
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  transition: all ease-in-out .2s;
+  transition: all ease-out .2s;
 }
 #randomEnvelope-envelope * * {
   &:extend(.fixed-child);
@@ -54,13 +73,22 @@ body {
 
 #letter {
   width: 88%;
-  height: 75%;
+  height: 20%;
   transition: all ease-in-out .3s;
   background-color: aliceblue;
+  border-radius: 5px;
+
+  overflow: hidden;
 
   position: fixed !important;
-  bottom: 0;
+  top: 0;
   margin-inline: 6%;
+}
+#letter-frame {
+  width: max-content;
+  width: -webkit-fill-available;
+  height: max-content;
+  height: -webkit-fill-available;
 }
 
 .fixed-parent {

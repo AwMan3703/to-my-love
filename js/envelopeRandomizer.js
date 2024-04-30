@@ -15,6 +15,7 @@ const envelopePath = "assets/envelope"
 const stampsPath = "assets/stamps/"
 
 const randomizeEnvelope = (data) => {
+    // Ignoring the syntax warnings for the data fields feels like saying "trust me bro" to my IDE
     const envelopeN = randInt(1, data.ranges.envelopes)
     const stampsN = randInt(2, data.ranges.stamps) // start from 2 because stamps/1.png is reserved to detect failed randomization
 
@@ -22,12 +23,15 @@ const randomizeEnvelope = (data) => {
     body.src = envelopePath + envelopeN + "/body.png"
     flap.src = envelopePath + envelopeN + "/flap.png"
 
-    animateEnvelope(envelopeN, stampsN)
-
     console.log(`envelope randomization complete (envelope #${envelopeN}, stamps #${stampsN})`)
+    return { envelopeN, stampsN }
 }
 
-fetchjson("../data/envelopeRandomization.json", (data) => {
-    randomizeEnvelope(data)
-    envelope.style.transform = ""; // Show the envelope
+// Get the current path, cut out the file name and replace it with the file we want
+const dataPath = "data/envelopeRandomization.json"
+const fileNameHrefIndex = window.location.href.indexOf("index.html")
+const randomizationDataURL = (fileNameHrefIndex > 0 ? window.location.href.substring(0,window.location.href.indexOf("index.html")) : window.location.href) + dataPath
+fetchjson(randomizationDataURL, (data) => {
+    const randData = randomizeEnvelope(data)
+    animateEnvelope(randData.envelopeN, randData.stampsN)
 })
