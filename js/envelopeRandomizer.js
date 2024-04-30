@@ -26,7 +26,9 @@ const randomizeEnvelope = (data) => {
     return { envelopeN, stampsN }
 }
 
-fetchjson("../data/envelopeRandomization.json", (data) => {
+// Get the current path, cut out the file name and replace it with the file we want
+const randomizationDataURL = window.location.href.substring(0,window.location.href.indexOf("index.html")) + "data/envelopeRandomization.json"
+fetchjson(randomizationDataURL, (data) => {
     const randData = randomizeEnvelope(data)
     animateEnvelope(randData.envelopeN, randData.stampsN)
 })
