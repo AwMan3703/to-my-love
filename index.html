@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title><3</title>
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
         <link rel="stylesheet" type="text/css" href="style/main.css">
         <link rel="stylesheet" href="style/keyframes.css">
     </head>
     <body>
         <div id="background-main"></div>
-
-
+        
         <!--Keep this on top-->
         <div id="randomEnvelope-envelopeWrapper">
             <div id="randomEnvelope-envelope" style="transform: perspective(10cm) translate(0, 150%) rotateX(-90deg) rotateY(-245deg) rotateZ(-50deg)">
@@ -18,7 +18,9 @@
                     <img id="randomEnvelope-inside" src="assets/envelope1/inside.png" alt="letter could not be loaded :(">
                 </div>
 
-                <div id="letter"></div>
+                <div id="letter">
+                    <iframe id="letter-frame" src="_letter-content/letter.html"></iframe>
+                </div>
 
                 <div id="randomEnvelope-level-front">
                     <img id="randomEnvelope-body" src="assets/envelope1/body.png">

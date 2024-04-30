@@ -6,6 +6,10 @@ body {
   background-color: #391e3b;
   background-image: radial-gradient(#321b33, #492a42);
 }
+iframe {
+  border: 0;
+  background-color: transparent;
+}
 #background-main {
   width: 100dvw;
   height: 100dvh;
@@ -60,9 +64,16 @@ body {
   transition: all ease-in-out 0.3s;
   background-color: aliceblue;
   border-radius: 5px;
+  overflow: hidden;
   position: fixed !important;
   top: 0;
   margin-inline: 6%;
+}
+#letter-frame {
+  width: max-content;
+  width: -webkit-fill-available;
+  height: max-content;
+  height: -webkit-fill-available;
 }
 .fixed-parent,
 #randomEnvelope-envelope {
