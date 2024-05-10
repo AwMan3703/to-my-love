@@ -1,6 +1,6 @@
 @keyframes letter-reveal-1 {
   from {
-    transform: perspective(10cm) translate(0, 150%) rotateX(-90deg) rotateY(245deg) rotateZ(-50deg);
+    transform: perspective(10cm) translate(0, 250%) rotateX(-90deg) rotateY(245deg) rotateZ(-50deg);
   }
   to {
     transform: perspective(20cm) rotateY(180deg);
@@ -11,12 +11,12 @@
     transform: perspective(20cm) rotateY(180deg);
   }
   to {
-    transform: perspective(20cm) rotateY(90deg);
+    transform: perspective(20cm) rotateY(95deg);
   }
 }
 @keyframes letter-reveal-3 {
   from {
-    transform: perspective(20cm) rotateY(90deg);
+    transform: perspective(20cm) rotateY(85deg);
   }
   to {
     transform: none;
