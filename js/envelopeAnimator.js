@@ -1,9 +1,11 @@
+// Reveal the letter, entering from the bottom and show the back, with the stamps
 const animation_phase1 = () => {
     envelope.style.animationName = "letter-reveal-1"
     envelopeWrapper.style.bottom = "60px"
 
     envelope.addEventListener("click", animation_phase2)
 }
+// Start turning to reveal the front, stop halfway
 const animation_phase2 = () => {
     envelope.style.animationDuration = ".25s"
     envelope.style.animationTimingFunction = "ease-in"
@@ -11,6 +13,7 @@ const animation_phase2 = () => {
 
     envelope.addEventListener("animationend", animation_phase3)
 }
+// Show the flap, body and inside, hide the front and stamps - then resume turning
 const animation_phase3 = () => {
     inside.style.visibility = "visible"
     body.style.visibility = "visible"
@@ -24,6 +27,7 @@ const animation_phase3 = () => {
 
     envelope.addEventListener("animationend", animation_phase4)
 }
+// Open the flap and extract the letter
 const animation_phase4 = () => {
     envelopeLevelBack.appendChild(flap)
 
