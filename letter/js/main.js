@@ -46,7 +46,7 @@ function single_line_list(elements, sep, final) {
         const element = elements[i]
         if ((element !== null) && (element !== '')) {
             const next = elements[i+1]
-            result += (!next || next==='') ? (final + element) : (i===0 ? element : (sep + element))
+            result += (next===undefined || !next) ? (final + element) : (i===0 ? element : (sep + element))
         }
     }
 
