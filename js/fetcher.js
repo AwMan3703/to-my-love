@@ -1,5 +1,5 @@
 
-function fetchjson(url, callback) {
+function fetchjson(url, callback, errorCallback) {
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -12,6 +12,7 @@ function fetchjson(url, callback) {
         })
         .catch(error => {
             console.error('Error fetching data:', error)
+            if (errorCallback) errorCallback(error)
         });
 
 }
