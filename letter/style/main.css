@@ -4,6 +4,9 @@
   color: white;
   text-shadow: 0 3px 20px #ea319a;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 body,
 main,
 footer {
