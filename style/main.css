@@ -15,20 +15,6 @@ iframe {
   border: 0;
   background-color: transparent;
 }
-#background-main {
-  width: 100dvw;
-  height: 100dvh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -10;
-  background-image: radial-gradient(#e78ad8, #883981);
-  opacity: 0;
-  transition: opacity 0.8s ease-out;
-}
-#background-main.lights-on {
-  opacity: 1;
-}
 #randomEnvelope-envelopeWrapper {
   position: fixed;
   bottom: -60px;
@@ -82,6 +68,27 @@ iframe {
 }
 #fetch-error-message {
   visibility: hidden;
+  color: white;
+  font-family: sans-serif;
+  opacity: 60%;
+}
+#fetch-error-message > hr {
+  margin-block: 40px;
+}
+#fetch-error-image {
+  width: 20dvh;
+}
+#fetch-error-title {
+  font-weight: bolder;
+}
+#fetch-error-description {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-color: white;
+  border-width: 0.5px;
+  border-radius: 10px;
+  transform: rotate(-1deg);
 }
 .fixed-parent,
 #randomEnvelope-envelope {

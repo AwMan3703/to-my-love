@@ -41,7 +41,7 @@ document.getElementById("letter-frame").addEventListener(
             },
             (error) => {
                 document.getElementById("fetch-error-message").style.visibility = "visible"
-                document.querySelector("#fetch-error-message > #error-description").innerHTML = error
+                document.querySelector("#fetch-error-message > #fetch-error-description").innerHTML = "⚠️ " + error
             }
         )
     }
