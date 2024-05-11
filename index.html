@@ -9,8 +9,6 @@
         <link rel="stylesheet" href="style/keyframes.css">
     </head>
     <body>
-        <div id="background-main"></div>
-        
         <!--Keep this on top-->
         <div id="randomEnvelope-envelopeWrapper">
             <div id="randomEnvelope-envelope" style="transform: translateY(300%)">
@@ -31,6 +29,13 @@
             </div>
         </div>
         <!-------------------->
+
+        <!--Error screen-->
+        <div id="fetch-error-message" style="background-color: red; width: 100px; height: 50px;">
+            <img src="assets/loading-error.png" alt="ERROR">
+            <h3>An error occurred while loading...</h3>
+            <p id="error-description"></p>
+        </div>
 
         <script src="js/utility.js"></script>
         <script src="js/fetcher.js"></script>

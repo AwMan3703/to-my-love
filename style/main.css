@@ -3,6 +3,11 @@
 }
 body {
   margin: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #391e3b;
   background-image: radial-gradient(#321b33, #492a42);
 }
@@ -74,6 +79,9 @@ iframe {
   width: -webkit-fill-available;
   height: max-content;
   height: -webkit-fill-available;
+}
+#fetch-error-message {
+  visibility: hidden;
 }
 .fixed-parent,
 #randomEnvelope-envelope {

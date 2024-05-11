@@ -34,9 +34,15 @@ const randomizationDataURL = (fileNameHrefIndex > 0 ? window.location.href.subst
 document.getElementById("letter-frame").addEventListener(
     "load",
     function() {
-        fetchjson(randomizationDataURL, (data) => {
+        fetchjson(randomizationDataURL,
+            (data) => {
             const randData = randomizeEnvelope(data)
             animateEnvelope(randData.envelopeN, randData.stampsN)
-        })
+            },
+            (error) => {
+                document.getElementById("fetch-error-message").style.visibility = "visible"
+                document.querySelector("#fetch-error-message > #error-description").innerHTML = error
+            }
+        )
     }
 )
