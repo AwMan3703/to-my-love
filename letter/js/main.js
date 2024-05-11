@@ -1,4 +1,4 @@
-
+// Return plural version if number is not 1 or -1
 function switchPlural(number, singular, plural) {
     return Math.abs(number)===1 ? singular : plural
 }
