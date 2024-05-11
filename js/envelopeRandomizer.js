@@ -31,7 +31,12 @@ const randomizeEnvelope = (data) => {
 const dataPath = "data/envelopeRandomization.json"
 const fileNameHrefIndex = window.location.href.indexOf("index.html")
 const randomizationDataURL = (fileNameHrefIndex > 0 ? window.location.href.substring(0,window.location.href.indexOf("index.html")) : window.location.href) + dataPath
-fetchjson(randomizationDataURL, (data) => {
-    const randData = randomizeEnvelope(data)
-    animateEnvelope(randData.envelopeN, randData.stampsN)
-})
+document.getElementById("letter-frame").addEventListener(
+    "load",
+    function() {
+        fetchjson(randomizationDataURL, (data) => {
+            const randData = randomizeEnvelope(data)
+            animateEnvelope(randData.envelopeN, randData.stampsN)
+        })
+    }
+)
