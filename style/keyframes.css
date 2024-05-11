@@ -11,12 +11,12 @@
     transform: perspective(20cm) rotateY(180deg);
   }
   to {
-    transform: perspective(20cm) rotateY(95deg);
+    transform: perspective(20cm) rotateY(98deg);
   }
 }
 @keyframes letter-reveal-3 {
   from {
-    transform: perspective(20cm) rotateY(85deg);
+    transform: perspective(20cm) rotateY(82deg);
   }
   to {
     transform: none;

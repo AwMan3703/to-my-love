@@ -7,7 +7,7 @@ const animation_phase1 = () => {
 }
 // Start turning to reveal the front, stop halfway
 const animation_phase2 = () => {
-    envelope.style.animationDuration = ".25s"
+    envelope.style.animationDuration = ".3s"
     envelope.style.animationTimingFunction = "ease-in"
     envelope.style.animationName = "letter-reveal-2"
 
@@ -29,6 +29,8 @@ const animation_phase3 = () => {
 }
 // Open the flap and extract the letter
 const animation_phase4 = () => {
+    envelope.style.animationDuration = ".6s"
+
     envelopeLevelBack.appendChild(flap)
 
     flap.style.transform = "scaleY(-100%)"
