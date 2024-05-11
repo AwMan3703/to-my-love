@@ -56,7 +56,7 @@ function single_line_list(elements, sep, final) {
 // Update all relationship duration counters with human-readable date difference
 function update_relationship_counters() {
     // set the dates
-    const startDate = new Date(2023, 1, 1)
+    const startDate = new Date(2023, 1, 1, 15, 30)
     const currentDate = new Date();
 
     // calculate the difference
