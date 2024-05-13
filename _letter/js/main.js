@@ -79,4 +79,7 @@ function update_relationship_counters() {
     }
 }
 
+// Run it the first time
+update_relationship_counters()
+// Then schedule it on an interval
 setInterval(update_relationship_counters, 1000)
