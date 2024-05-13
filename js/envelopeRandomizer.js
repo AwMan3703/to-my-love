@@ -39,7 +39,12 @@ document.getElementById("letter-frame").addEventListener(
             const randData = randomizeEnvelope(data)
             animateEnvelope(randData.envelopeN, randData.stampsN)
             },
-            (error) => { showErrorMessage("fetch failed", error) }
+            (error) => {
+                showErrorMessage("fetch failed", error, [
+                    "You opened this page from a local file",
+                    "CORS is blocking fetch requests"
+                ])
+            }
         )
     }
 )

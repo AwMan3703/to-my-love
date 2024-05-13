@@ -31,11 +31,19 @@
         <!-------------------->
 
         <!--Error screen-->
-        <div id="fetch-error-message">
-            <img id="fetch-error-image" src="assets/fetch-error.png" alt="ERROR">
-            <hr>
-            <h3 id="fetch-error-title">An error occurred!</h3>
-            <p id="fetch-error-description"></p>
+        <div id="fetch-error">
+            <div id="fetch-error-header">
+                <img id="fetch-error-image" src="assets/fetch-error.png" alt="ERROR">
+                <hr>
+            </div>
+            <div id="fetch-error-details">
+                <h3 id="fetch-error-title">An error occurred!</h3>
+                <p id="fetch-error-description"></p>
+            </div>
+            <div id="fetch-error-diagnosis">
+                <h3 id="fetch-error-diagnosis-title">What may have caused this:</h3>
+                <ul id="fetch-error-diagnosis-list"></ul>
+            </div>
         </div>
 
         <script src="js/utility.js"></script>

@@ -66,17 +66,21 @@ iframe {
   height: max-content;
   height: -webkit-fill-available;
 }
-#fetch-error-message {
+#fetch-error {
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   color: white;
   font-family: sans-serif;
   opacity: 60%;
 }
-#fetch-error-message > hr {
-  margin-block: 40px;
-}
 #fetch-error-image {
   width: 20dvh;
+  margin-block-end: 50px;
+}
+#fetch-error-header hr {
+  margin: 0;
 }
 #fetch-error-title {
   font-weight: bolder;
@@ -89,6 +93,12 @@ iframe {
   border-width: 1px;
   border-radius: 10px;
   transform: rotate(-0.7deg);
+}
+#fetch-error-diagnosis {
+  opacity: 40%;
+}
+#fetch-error-diagnosis li + li {
+  margin-block-start: 10px;
 }
 .fixed-parent,
 #randomEnvelope-envelope {
