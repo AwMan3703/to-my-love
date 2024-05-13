@@ -25,6 +25,18 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+a {
+  text-shadow: 0 3px 20px blue;
+  text-decoration: white underline 3px;
+  transition: text-shadow 0.5s;
+  cursor: pointer;
+}
+a:active {
+  text-shadow: 0 3px 10px aqua;
+}
+a:visited {
+  text-shadow: 0 3px 10px rebeccapurple;
+}
 .flex-h {
   display: flex;
   flex-direction: row;
