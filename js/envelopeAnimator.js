@@ -41,7 +41,7 @@ const animation_phase4 = () => {
 
     envelope.style.translate = "0 50%"
 
-    document.getElementById('background-main').classList.add('lights-on')
+    document.getElementById("lights-on").style.opacity = 1
 
     envelope.removeEventListener("load", animation_phase1)
     envelope.removeEventListener("click", animation_phase2)

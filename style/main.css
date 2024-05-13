@@ -9,7 +9,16 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #391e3b;
-  background-image: radial-gradient(#321b33, #492a42);
+  background-image: radial-gradient(#261027, #3c2136);
+}
+#lights-on {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+  background-image: radial-gradient(#985a95, #5c2a50);
 }
 iframe {
   border: 0;
