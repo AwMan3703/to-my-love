@@ -1,20 +1,25 @@
 // Reveal the letter, entering from the bottom and show the back, with the stamps
 const animation_phase1 = () => {
+    console.log("phase 1 start");
     envelope.style.animationName = "letter-reveal-1"
     envelopeWrapper.style.bottom = "60px"
 
     envelope.addEventListener("click", animation_phase2)
+    console.log("phase 1 end - awaiting click");
 }
 // Start turning to reveal the front, stop halfway
 const animation_phase2 = () => {
+    console.log("phase 2 start");
     envelope.style.animationDuration = ".3s"
     envelope.style.animationTimingFunction = "ease-in"
     envelope.style.animationName = "letter-reveal-2"
 
     envelope.addEventListener("animationend", animation_phase3)
+    console.log("phase 2 end");
 }
 // Show the flap, body and inside, hide the front and stamps - then resume turning
 const animation_phase3 = () => {
+    console.log("phase 3 start");
     inside.style.visibility = "visible"
     body.style.visibility = "visible"
     flap.style.visibility = "visible"
@@ -26,10 +31,12 @@ const animation_phase3 = () => {
     envelope.style.animationName = "letter-reveal-3"
 
     envelope.addEventListener("animationend", animation_phase4)
+    console.log("phase 3 end");
 }
 // Open the flap and extract the letter
 const animation_phase4 = () => {
-    envelope.style.animationDuration = ".6s"
+    console.log("phase 4 start");
+    envelope.style.animationName = "none"
 
     envelopeLevelBack.appendChild(flap)
 
@@ -47,6 +54,7 @@ const animation_phase4 = () => {
     envelope.removeEventListener("click", animation_phase2)
     envelope.removeEventListener("animationend", animation_phase3)
     envelope.removeEventListener("animationend", animation_phase4)
+    console.log("phase 4 end");
 }
 
 function animateEnvelope(envelopeN, stampsN) {
@@ -59,4 +67,5 @@ function animateEnvelope(envelopeN, stampsN) {
     front.src = envelopePath + envelopeN + "/front.png"
     stamps.addEventListener("load", animation_phase1)
     stamps.src = stampsPath + stampsN + ".png"
+    console.log("starting animation...")
 }
