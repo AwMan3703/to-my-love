@@ -49,6 +49,7 @@ const animation_phase4 = () => {
     envelope.style.translate = "0 50%"
 
     document.getElementById("light-up").style.opacity = 1
+    document.body.style.backgroundColor = "#5C2A50FF"
 
     envelope.removeEventListener("load", animation_phase1)
     envelope.removeEventListener("click", animation_phase2)

@@ -16,20 +16,25 @@ footer {
 }
 body {
   margin: 0;
-  min-width: 100vw;
+  padding-inline: 20px;
+  max-width: 100vw;
   min-height: 100vh;
   display: flex;
   gap: 40px;
   justify-content: space-between;
+  background-color: #F4E5D3FF;
   background-image: radial-gradient(transparent, #efe8df 60%, #f4e5d3 90%);
   background-size: cover;
   background-repeat: no-repeat;
 }
 a {
-  text-shadow: 0 3px 20px blue;
+  text-shadow: 0 3px 10px rgba(0, 0, 255, 0.6);
   text-decoration: white underline 3px;
   transition: text-shadow 0.5s;
   cursor: pointer;
+}
+a:hover {
+  text-shadow: 0 3px 20px rgba(0, 0, 255, 0.8);
 }
 a:active {
   text-shadow: 0 3px 10px aqua;
