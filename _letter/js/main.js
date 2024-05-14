@@ -6,7 +6,7 @@ function switchPlural(number, singular, plural) {
 // Get the difference between two dates
 function datediff(start, end) {
     // get the difference between the two dates in seconds (I'm not crazy)
-    let remaining = Math.round((end - start) / 1000)
+    let remaining = Math.ceil((end - start) / 1000)
 
     // boring stuff
     const years = Math.floor(remaining / 31_536_000)
@@ -25,13 +25,8 @@ function datediff(start, end) {
 
     // table it and return
     return {
-        years: years,
-        months: months,
-        weeks: weeks,
-        days: days,
-        hours: hours,
-        minutes: minutes,
-        seconds: seconds
+        years: years, months: months, weeks: weeks, days: days,
+        hours: hours, minutes: minutes, seconds: seconds
     }
 }
 
