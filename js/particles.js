@@ -31,6 +31,7 @@ function linearParticle(parent, startX, startY, startRotation, startClass, endX,
 function particleExplosion(parent, count, startRect, endRect, startClass, endClass, className, imageUrl) {
     for (let i = 0; i < count; i++) {
         // TODO: fix positions
+        // FIXME: fix positions
         let startX = (Math.random() * startRect.width)
         startX += startRect.x
         startX += startRect.width / 2
@@ -49,7 +50,7 @@ function particleExplosion(parent, count, startRect, endRect, startClass, endCla
             : (Math.random() * (endRect.height / 2)) + (endRect.height / 2)
         endY += endRect.y
 
-        // TODO: fix rotation
+        // FIXME: fix rotation
         let endRot = (startX < startRect.width / 2)
             ? ((startY < startRect.height / 2)
                 ? (Math.random() * 90) + 270 // top left : 270-360
