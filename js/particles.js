@@ -1,3 +1,26 @@
+function findThirdPoint(x1, y1, x2, y2, distance) {
+    // Calculate the direction vector
+    let dx = x2 - x1;
+    let dy = y2 - y1;
+
+    // Calculate the length of the direction vector
+    let length = Math.sqrt(dx * dx + dy * dy);
+
+    // Normalize the direction vector to get the unit vector
+    let unitDx = dx / length;
+    let unitDy = dy / length;
+
+    // Scale the unit vector by the given distance
+    let newDx = unitDx * distance;
+    let newDy = unitDy * distance;
+
+    // Calculate the coordinates of the third point
+    let x3 = x2 + newDx;
+    let y3 = y2 + newDy;
+
+    return { x: x3, y: y3 };
+}
+
 function linearParticle(parent, startX, startY, startRotation, startClass, endX, endY, endRotation, endClass, className, imageUrl) {
     // Generate an image element
     let particle = document.createElement("img")
@@ -28,36 +51,24 @@ function linearParticle(parent, startX, startY, startRotation, startClass, endX,
     })
 }
 
-function particleExplosion(parent, count, startRect, endRect, startClass, endClass, className, imageUrl) {
+function particleExplosion(parent, count, startRect, rangeStart, rangeEnd, startClass, endClass, className, imageUrl) {
     for (let i = 0; i < count; i++) {
-        // TODO: fix positions
-        // FIXME: fix positions
+        const centerX = (startRect.x + startRect.width) - (startRect.width / 2)
+        const centerY = (startRect.y + startRect.height) - (startRect.height / 2)
+
         let startX = (Math.random() * startRect.width)
         startX += startRect.x
-        startX += startRect.width / 2
         let startY = (Math.random() * startRect.height)
         startY += startRect.y
-        startY += startRect.height / 2
+
+        const distance = rangeStart + (Math.random() * rangeEnd)
+
+        const end = findThirdPoint(centerX, centerY, startX, startY, distance)
+        let endX = end.x, endY = end.y
 
         let startRot = Math.random() * 360
+        let endRot = Math.random() * 360
 
-        let endX = (startX < startRect.width / 2)
-            ? (Math.random() * (endRect.width / 2))
-            : (Math.random() * (endRect.width / 2)) + (endRect.width / 2)
-        endX += endRect.x
-        let endY = (startY < startRect.height / 2)
-            ? (Math.random() * (endRect.height / 2))
-            : (Math.random() * (endRect.height / 2)) + (endRect.height / 2)
-        endY += endRect.y
-
-        // FIXME: fix rotation
-        let endRot = (startX < startRect.width / 2)
-            ? ((startY < startRect.height / 2)
-                ? (Math.random() * 90) + 270 // top left : 270-360
-                : (Math.random() * 90))//+ 0 // top right : 0-90
-            : ((startY < startRect.height / 2)
-                ? (Math.random() * 90) + 180 // bottom left : 180-270
-                : (Math.random() * 90) + 90) // bottom right : 90-180
         linearParticle(parent, startX, startY, startRot, startClass, endX, endY, endRot, endClass, className, imageUrl)
     }
 }
