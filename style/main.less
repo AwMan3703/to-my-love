@@ -19,17 +19,28 @@ body {
 	background-color: #3c2136;
 	background-image: radial-gradient(#261027, #3c2136);
 }
-#light-up {
-	opacity: 0;
 
+.rendering-level {
 	display: block;
 	position: absolute;
 
 	width: 100vw;
 	height: 100vh;
+}
+
+#light-up {
+	opacity: 0;
+
+	&:extend(.rendering-level);
 
 	transition: opacity .5s ease-in-out;
 	background-image: radial-gradient(#985a95, #5c2a50);
+}
+
+#particle-level {
+	&:extend(.rendering-level);
+	z-index: 10;
+	pointer-events: none; /* make clicks go through */
 }
 
 iframe {
@@ -94,6 +105,13 @@ iframe {
 	width: 100%;
 	height: 100%;
 }
+
+.heart-particle {
+	width: 5vh;
+	transition: top 1s ease-out, left 1s ease-out;
+}
+.heart-particle-start {}
+.heart-particle-end {}
 
 #fetch-error {
 	visibility: hidden;

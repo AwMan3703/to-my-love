@@ -14,6 +14,24 @@ const animation_phase2 = () => {
     envelope.style.animationTimingFunction = "ease-in"
     envelope.style.animationName = "letter-reveal-2"
 
+    const rect = envelope.getBoundingClientRect()
+    const distance = 100
+    particleExplosion(
+        document.getElementById("particle-level"),
+        Math.random() * 10,
+        rect,
+        new DOMRect(
+            rect.x - distance,
+            rect.y - distance,
+            rect.width + distance,
+            rect.height + distance
+        ),
+        "heart-particle-start",
+        "heart-particle-end",
+        "heart-particle",
+        "assets/heart.png"
+    )
+
     envelope.addEventListener("animationend", animation_phase3)
     console.log("phase 2 end");
 }
