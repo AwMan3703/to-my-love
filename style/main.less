@@ -101,7 +101,7 @@ iframe {
 
 	overflow: hidden;
 
-	position: fixed !important;
+	position: fixed;
 	top: 0;
 	margin-inline: 6%;
 }
@@ -111,15 +111,15 @@ iframe {
 }
 
 .heart-particle {
-	width: 5vh;
-	transition: all .7s ease-out;
-	opacity: 100%;
+	transition: all 1s cubic-bezier(0.5, 1, 1, 1);
 }
 .heart-particle-start {
+	width: 3vh;
 	opacity: 100%;
 }
 .heart-particle-end {
-	opacity: 0% !important;
+	width: 10vh;
+	opacity: 0;
 }
 
 #fetch-error {

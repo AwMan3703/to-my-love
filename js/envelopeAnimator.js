@@ -46,7 +46,7 @@ const animation_phase4 = () => {
     const rect = envelope.getBoundingClientRect()
     particleExplosion(
         document.getElementById("particle-level"),
-        (Math.random() * 10) + 5,
+        (Math.random() * 20) + 10,
         rect,
         190,
         210,
