@@ -41,13 +41,10 @@ function linearParticle(parent, startX, startY, startRotation, startClass, endX,
         particle.style.left = `${Math.round(endX)}px`
         particle.style.top = `${Math.round(endY)}px`
         particle.style.rotate = `${endRotation}deg`
-        // Wait for it to finish transitioning
-        particle.addEventListener("transitionend", () => {
-            // Switch class names
-            particle.className = particle.className.replace(startClass, endClass)
-            // Wait for the transition to finish, then remove the particle
-            particle.addEventListener("transitionend", particle.remove)
-        })
+        // Switch class names
+        particle.className = particle.className.replace(startClass, endClass)
+        // Wait for it to finish transitioning, then remove
+        particle.addEventListener("transitionend", particle.remove)
     })
 }
 

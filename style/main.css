@@ -88,12 +88,13 @@ iframe {
 .heart-particle {
   width: 5vh;
   transition: all 0.7s ease-out;
+  opacity: 100%;
 }
 .heart-particle-start {
   opacity: 100%;
 }
 .heart-particle-end {
-  opacity: 0%;
+  opacity: 0% !important;
 }
 #fetch-error {
   visibility: hidden;
