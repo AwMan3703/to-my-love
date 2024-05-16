@@ -23,7 +23,7 @@
                 </div>
 
                 <div id="letter">
-                    <iframe id="letter-frame" src="_letter/index.html"></iframe>
+                    <iframe id="letter-frame" src="_letter/index.html" onload="document.getElementById('loading-widget').classList.remove('displayed')"></iframe>
                 </div>
 
                 <div id="randomEnvelope-level-front">
@@ -50,6 +50,11 @@
                 <h3 id="fetch-error-diagnosis-title">What may have caused this:</h3>
                 <ul id="fetch-error-diagnosis-list"></ul>
             </div>
+        </div>
+
+        <!--Loading screen-->
+        <div id="loading-widget" class="displayed">
+            <p>Loading...</p>
         </div>
 
         <script src="js/utility.js"></script>

@@ -123,13 +123,16 @@ iframe {
 }
 
 #fetch-error {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	gap: 20px;
 
 	color: white;
 	font-family: sans-serif;
 	opacity: 60%;
+}
+#fetch-error.displayed {
+	display: flex;
 }
 #fetch-error-image {
 	width: 20dvh;
@@ -155,6 +158,13 @@ iframe {
 }
 #fetch-error-diagnosis li + li {
 	margin-block-start: 10px;
+}
+
+#loading-widget {
+	display: none;
+}
+#loading-widget.displayed {
+	display: block;
 }
 
 .fixed-parent {

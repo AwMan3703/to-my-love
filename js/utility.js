@@ -6,7 +6,7 @@ function randInt(min, max) {
 
 // (causes must be an array of strings describing potential causes of the problem)
 function showErrorMessage(title, error, causes) {
-    document.getElementById("fetch-error").style.display = "flex"
+    document.getElementById("fetch-error").classList.add("displayed")
     document.getElementById("fetch-error-title").innerHTML = `An error occurred ― ${title}!`
     const description = document.getElementById("fetch-error-description")
     description.innerHTML = "⚠️ " + error
