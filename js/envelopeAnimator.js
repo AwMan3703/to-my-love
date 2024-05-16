@@ -53,7 +53,7 @@ const animation_phase4 = () => {
         "heart-particle-start",
         "heart-particle-end",
         "heart-particle",
-        "assets/heart.png"
+        "assets/heart36.png"
     )
 
     letter.style.height = "220%"
