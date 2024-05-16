@@ -145,12 +145,7 @@ iframe {
 	font-weight: bolder;
 }
 #fetch-error-description {
-	padding: 10px;
-	background-color: rgba(255, 255, 255, 0.1);
-	border-style: solid;
-	border-color: white;
-	border-width: 1px;
-	border-radius: 10px;
+	&:extend(.widget-material);
 	transform: rotate(-.7deg);
 }
 #fetch-error-diagnosis {
@@ -161,10 +156,24 @@ iframe {
 }
 
 #loading-widget {
+	&:extend(.widget-material);
 	display: none;
 }
 #loading-widget.displayed {
 	display: block;
+}
+#loading-widget p {
+	margin: 0;
+}
+
+.widget-material {
+	color: white;
+	font-family: sans-serif;
+	opacity: 60%;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid white;
+	border-radius: 10px;
 }
 
 .fixed-parent {
