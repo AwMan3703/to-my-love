@@ -63,8 +63,8 @@ function particleExplosion(parent, count, startRect, rangeStart, rangeEnd, start
         const end = findThirdPoint(centerX, centerY, startX, startY, distance)
         let endX = end.x, endY = end.y
 
-        let startRot = Math.random() * 360
-        let endRot = Math.random() * 360
+        let startRot = 0 - (Math.random() * 90)
+        let endRot = 0 - (Math.random() * 90)
 
         linearParticle(parent, startX, startY, startRot, startClass, endX, endY, endRot, endClass, className, imageUrl)
     }
