@@ -30,6 +30,9 @@ body {
 main > p {
   line-height: 1.7em;
 }
+main > p::first-line {
+  line-height: 2.5em;
+}
 a {
   text-shadow: 0 3px 10px rgba(0, 0, 255, 0.6);
   text-decoration: white underline 3px;
@@ -67,7 +70,7 @@ a:visited {
   padding-inline: 30px;
   border-radius: 10px;
   color: white;
-  background-image: radial-gradient(pink, hotpink);
+  background-image: radial-gradient(rgba(255, 192, 203, 0.6), rgba(255, 105, 180, 0.6));
   transform: rotate(1deg);
   box-shadow: 0 7px 30px 0 rgba(165, 0, 59, 0.67);
 }

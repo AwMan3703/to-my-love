@@ -1,4 +1,10 @@
 
+const difference = (a, b) => Math.max(a, b) - Math.min(a, b)
+
+const normalize = (value, min, max) => {
+    return (value - min) / (max - min)
+}
+
 function randInt(min, max) {
     max = max + 1
     return Math.floor(Math.random() * (max - min)) + min

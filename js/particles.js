@@ -63,18 +63,11 @@ function particleExplosion(parent, count, startRect, rangeStart, rangeEnd, start
         const end = findThirdPoint(centerX, centerY, startX, startY, distance)
         let endX = end.x, endY = end.y
 
-        let startRot = 0 - (Math.random() * 90)
-        let endRot = 0 - (Math.random() * 90)
+        const multiplier = normalize(difference(startX, centerX), 0, difference(centerX, startRect.x))
+        const rotationRange = 135 * multiplier
+        let startRot = 0//(startX > centerX ? -rotationRange : 0) - (Math.random() * rotationRange) // Uncomment to also make start rotation random
+        let endRot = (startX > centerX ? rotationRange : 0) - (Math.random() * rotationRange)
 
         linearParticle(parent, startX, startY, startRot, startClass, endX, endY, endRot, endClass, className, imageUrl)
     }
 }
-
-/*particleExplosion(
-    document.getElementById("particle-level"),
-    5,
-    new DOMRect(50, 50, 100, 100),
-    new DOMRect(0, 0, visualViewport.width/2, visualViewport.height/2),
-    "a", "b", "heart-particle",
-    "assets/heart.png"
-)*/
