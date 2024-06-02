@@ -1,5 +1,9 @@
 // Reveal the letter, entering from the bottom and show the back, with the stamps
 const animation_phase1 = () => {
+    // Actually reveal the envelope
+    document.getElementById('randomEnvelope-envelopeWrapper').style.visibility = 'visible'
+
+    // Do all the rest
     console.log("phase 1 start");
     envelope.style.animationName = "letter-reveal-1"
     envelopeWrapper.style.bottom = "60px"

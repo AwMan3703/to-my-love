@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="style/main.css">
         <link rel="stylesheet" href="style/keyframes.css">
     </head>
-    <body style="visibility: hidden" onload="document.body.style.visibility = 'visible'">
+    <body>
         <!--Light-up background-->
         <div id="light-up"></div>
 
@@ -16,14 +16,14 @@
         <div id="particle-level"></div>
 
         <!--Keep this on top-->
-        <div id="randomEnvelope-envelopeWrapper">
+        <div id="randomEnvelope-envelopeWrapper" style="visibility: hidden">
             <div id="randomEnvelope-envelope" style="transform: translateY(300%)">
                 <div id="randomEnvelope-level-back">
                     <img id="randomEnvelope-inside" src="assets/envelope1/inside.png" alt="letter could not be loaded :(">
                 </div>
 
                 <div id="letter">
-                    <iframe id="letter-frame" src="letter/index.html" onload="document.getElementById('loading-widget').classList.remove('displayed')"></iframe>
+                    <iframe id="letter-frame" src="letter/index.html"></iframe>
                 </div>
 
                 <div id="randomEnvelope-level-front">

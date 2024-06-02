@@ -34,6 +34,10 @@ const randomizationDataURL = (fileNameHrefIndex > 0 ? window.location.href.subst
 document.getElementById("letter-frame").addEventListener(
     "load",
     function() {
+        // Hide the "loading" widget
+        document.getElementById('loading-widget').classList.remove('displayed')
+
+        // Start the animation
         fetchjson(randomizationDataURL,
             (data) => {
             const randData = randomizeEnvelope(data)
