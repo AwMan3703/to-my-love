@@ -11,8 +11,8 @@ const body = document.getElementById(prefix + "body")
 const flap = document.getElementById(prefix + "flap")
 const stamps = document.getElementById(prefix + "stamps")
 
-const envelopePath = "assets/envelope"
-const stampsPath = "assets/stamps/"
+const envelopePath = "index/assets/envelope"
+const stampsPath = "index/assets/stamps/"
 
 const randomizeEnvelope = (data) => {
     // Ignoring the syntax warnings for the data fields feels like saying "trust me bro" to my IDE
@@ -28,7 +28,7 @@ const randomizeEnvelope = (data) => {
 }
 
 // Get the current path, cut out the file name and replace it with the file we want
-const dataPath = "data/envelopeRandomization.json"
+const dataPath = "index/data/envelopeRandomization.json"
 const fileNameHrefIndex = window.location.href.indexOf("index.html")
 const randomizationDataURL = (fileNameHrefIndex > 0 ? window.location.href.substring(0,window.location.href.indexOf("index.html")) : window.location.href) + dataPath
 document.getElementById("letter-frame").addEventListener(
