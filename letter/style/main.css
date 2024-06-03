@@ -48,14 +48,6 @@ a:active {
 a:visited {
   text-shadow: 0 3px 10px rebeccapurple;
 }
-.flex-h {
-  display: flex;
-  flex-direction: row;
-}
-.flex-v {
-  display: flex;
-  flex-direction: column;
-}
 #overlay {
   pointer-events: none;
   position: fixed;
