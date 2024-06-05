@@ -109,6 +109,19 @@ iframe {
 	top: 0;
 	margin-inline: 6%;
 }
+#letter-overlay {
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.13), transparent 10%);
+	transition: opacity .5s ease;
+}
 #letter-frame {
 	width: 100%;
 	height: 100%;

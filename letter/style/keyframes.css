@@ -1,0 +1,12 @@
+@keyframes scroll-arrow-waves {
+  from {
+    translate: none;
+  }
+  50% {
+    translate: 0 30%;
+  }
+  to {
+    translate: none;
+  }
+}
+/*# sourceMappingURL=keyframes.css.map */
