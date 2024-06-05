@@ -1,37 +1,37 @@
 @font-face {
   font-family: 'Autography';
-  src: url("fonts/Autography.otf");
+  src: url("_fonts/Autography.otf");
 }
 @font-face {
   font-family: 'Avelire';
-  src: url("fonts/AVELIRE.otf");
+  src: url("_fonts/AVELIRE.otf");
 }
 @font-face {
   font-family: 'Greek Rolls';
-  src: url("fonts/GreekRollsRegular.ttf");
+  src: url("_fonts/GreekRollsRegular.ttf");
 }
 @font-face {
   font-family: 'Ice Cream';
-  src: url("fonts/IceCream.otf");
+  src: url("_fonts/IceCream.otf");
 }
 @font-face {
   font-family: 'King Share';
-  src: url("fonts/Kingshare.otf");
+  src: url("_fonts/Kingshare.otf");
 }
 @font-face {
   font-family: 'Pisang Lagi';
-  src: url("fonts/PisangLagi.otf");
+  src: url("_fonts/PisangLagi.otf");
 }
 @font-face {
   font-family: 'Berkelium';
-  src: url("fonts/berkelium-bitmap.ttf");
+  src: url("_fonts/berkelium-bitmap.ttf");
 }
 @font-face {
   font-family: 'Standard Bitmap';
-  src: url("fonts/AddStandardBitmap.ttf");
+  src: url("_fonts/AddStandardBitmap.ttf");
 }
 @font-face {
   font-family: 'WebPixel';
-  src: url("fonts/webpixel bitmap_medium.otf");
+  src: url("_fonts/webpixel bitmap_medium.otf");
 }
 /*# sourceMappingURL=fonts.css.map */
