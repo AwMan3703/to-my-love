@@ -1,0 +1,9 @@
+@keyframes train-movement {
+  from {
+    translate: 0 15px;
+  }
+  to {
+    translate: 0;
+  }
+}
+/*# sourceMappingURL=keyframes.css.map */
