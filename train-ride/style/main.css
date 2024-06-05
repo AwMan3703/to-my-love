@@ -2,20 +2,20 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  font-family: "Pisang Lagi", system-ui;
   background-color: #16161e;
   background-image: linear-gradient(180deg, rgba(188, 220, 241, 0.1) 0%, rgba(188, 220, 241, 0.01) 30%, transparent 100%);
 }
 #background-grid {
-  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 100%;
-  opacity: 5%;
-  --line-color: rgba(255, 255, 255, 0.025);
+  opacity: 4%;
   background-size: min(7vw, 7vh) min(7vw, 7vh);
+  /*--line-color: rgba(255, 255, 255, .025);*/
   background-image: url("../assets/scrolling-background-2x.gif");
   /* linear-gradient(90deg, transparent 0%, transparent 48%, var(--line-color) 48%, var(--line-color) 52%, transparent 52%, transparent 100%),
 			linear-gradient(0deg, transparent 0%, transparent 48%, var(--line-color) 48%, var(--line-color) 52%, transparent 52%, transparent 100%); */
@@ -28,6 +28,16 @@ body {
 main {
   display: flex;
   flex-direction: column;
+}
+.fixed-parent,
+#background-grid,
+#tooltip-level {
+  position: fixed;
+}
+.fixed-child,
+#image img,
+#tooltip {
+  position: absolute;
 }
 .no-antialiasing,
 #image img {
@@ -53,12 +63,54 @@ main {
 }
 #image {
   display: flex;
-  width: 60%;
-  height: 40%;
+  justify-content: center;
+  align-items: center;
+  width: 768px;
+  height: 384px;
+}
+#image img {
+  transition: opacity 0.075s ease-in-out, filter 0.075s ease-in-out;
+}
+#image img.selectable:hover {
+  cursor: help;
+}
+#image:has(img.selectable:hover) img:not(:hover) {
+  filter: brightness(50%) contrast(90%);
 }
 .glow,
-main {
+main p {
   filter: drop-shadow(0 0 10px #93dfff);
   text-shadow: 0 0 5px #93dfff;
+}
+.selected,
+#image img.selectable:hover {
+  --width-pos: 2px;
+  --width-neg: -2px;
+  filter: drop-shadow(var(--width-pos) 0 0 white) drop-shadow(0 var(--width-pos) 0 white) drop-shadow(var(--width-neg) 0 0 white) drop-shadow(0 var(--width-neg) 0 white) drop-shadow(0 0 15px black);
+}
+#tooltip-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#tooltip {
+  transform-origin: left center;
+  opacity: 0;
+  translate: 30px;
+  transition: opacity 0.2s ease, translate 0.2s ease;
+  font-family: "Standard Bitmap", monospace;
+  max-width: 30pc;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  padding: 10px;
+  border: solid 5px #212039;
+  border-radius: 10px;
+}
+:has(#image img.selectable:hover) #tooltip {
+  opacity: 1;
+  translate: 30px -50%;
 }
 /*# sourceMappingURL=main.css.map */
