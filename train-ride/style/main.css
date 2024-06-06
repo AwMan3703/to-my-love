@@ -35,12 +35,12 @@ main {
   position: fixed;
 }
 .fixed-child,
-#image img,
+.scene img,
 #tooltip {
   position: absolute;
 }
 .no-antialiasing,
-#image img {
+.scene img {
   image-rendering: optimizeSpeed;
   image-rendering: -moz-crisp-edges;
   /* Firefox */
@@ -61,25 +61,35 @@ main {
   align-items: center;
   justify-content: space-around;
 }
-#image {
+.scene-container {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+#train-scene-container {
+  gap: -30px;
+  justify-content: center;
+}
+.train-car-scene {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 768px;
+  min-width: 768px;
   height: 384px;
+  margin-inline: -25px;
   animation-name: train-movement;
   animation-duration: 0.7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-#image img {
+.scene img {
   transition: opacity 0.075s ease-in-out, filter 0.075s ease-in-out;
 }
-#image img.selectable:hover {
+img.selectable:hover {
   cursor: help;
 }
-#image:has(img.selectable:hover) img:not(:hover) {
-  filter: brightness(50%) contrast(90%);
+:has(img.selectable:hover) img:not(:hover) {
+  filter: brightness(40%) contrast(90%);
 }
 .glow,
 main p {
@@ -87,7 +97,7 @@ main p {
   text-shadow: 0 0 5px #93dfff;
 }
 .selected,
-#image img.selectable:hover {
+img.selectable:hover {
   --width-pos: 2px;
   --width-neg: -2px;
   filter: drop-shadow(var(--width-pos) 0 0 white) drop-shadow(0 var(--width-pos) 0 white) drop-shadow(var(--width-neg) 0 0 white) drop-shadow(0 var(--width-neg) 0 white) drop-shadow(0 0 15px black);
@@ -113,7 +123,7 @@ main p {
   border: solid 5px #212039;
   border-radius: 10px;
 }
-:has(#image img.selectable:hover) #tooltip {
+:has(img.selectable:hover) #tooltip {
   opacity: 1;
   translate: 30px -50%;
 }

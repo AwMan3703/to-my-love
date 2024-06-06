@@ -63,29 +63,40 @@ main p {
 	&:extend(.glow);
 }
 
-#image {
+.scene-container {
+	max-width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+}
+#train-scene-container {
+	gap: -30px;
+	justify-content: center;
+}
+.scene {}
+.train-car-scene {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 768px;
+	min-width: 768px;
 	height: 384px;
+	margin-inline: -25px;
 
 	animation-name: train-movement;
 	animation-duration: 0.7s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 }
-#image img {
+.scene img {
 	&:extend(.fixed-child);
 	&:extend(.no-antialiasing);
 	transition: opacity .075s ease-in-out, filter .075s ease-in-out;
 }
-#image img.selectable:hover {
+img.selectable:hover {
 	&:extend(.selected);
 	cursor: help;
 }
-#image:has(img.selectable:hover) img:not(:hover) {
-	filter: brightness(50%) contrast(90%);
+:has(img.selectable:hover) img:not(:hover) {
+	filter: brightness(40%) contrast(90%);
 }
 
 .glow {
@@ -131,7 +142,7 @@ main p {
 	border: solid 5px #212039;
 	border-radius: 10px;
 }
-:has(#image img.selectable:hover) #tooltip {
+:has(img.selectable:hover) #tooltip {
 	opacity: 1;
 	translate: 30px -50%;
 }
