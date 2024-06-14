@@ -40,6 +40,7 @@ main {
   position: absolute;
 }
 .no-antialiasing,
+.scene,
 .scene img {
   image-rendering: optimizeSpeed;
   image-rendering: -moz-crisp-edges;
@@ -69,6 +70,9 @@ main {
 #train-scene-container {
   gap: -30px;
   justify-content: center;
+}
+.scene {
+  z-index: 1;
 }
 .train-car-scene {
   display: flex;
@@ -102,6 +106,10 @@ img.selectable:hover {
   --width-neg: -2px;
   filter: drop-shadow(var(--width-pos) 0 0 white) drop-shadow(0 var(--width-pos) 0 white) drop-shadow(var(--width-neg) 0 0 white) drop-shadow(0 var(--width-neg) 0 white) drop-shadow(0 0 15px black);
 }
+.horizontal-repeating-background {
+  background-repeat: repeat-x;
+  background-size: contain;
+}
 #tooltip-level {
   position: absolute;
   top: 0;
@@ -109,6 +117,7 @@ img.selectable:hover {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  z-index: 10;
 }
 #tooltip {
   transform-origin: left center;
