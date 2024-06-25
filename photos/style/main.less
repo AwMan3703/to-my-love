@@ -1,0 +1,98 @@
+
+
+body {
+	margin: 0;
+	background-color: #16161e;
+
+	color: rgba(255, 255, 255, 1);
+	font-family: "Pisang Lagi", system-ui;
+}
+
+.h-stack {
+	display: flex;
+	flex-direction: row;
+}
+.v-stack {
+	display: flex;
+	flex-direction: column;
+}
+.fixed-parent {
+	position: fixed;
+}
+.fixed-child {
+	position: absolute;
+}
+
+#photos-container {
+	overflow: hidden;
+	position: fixed;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+}
+
+.photo-wrapper {
+	&:extend(.fixed-child);
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+
+	padding: 10px;
+	padding-block-end: 70px;
+
+	background-color: whitesmoke;
+	border-radius: 10px;
+	border: solid 1px gray;
+
+	cursor: grab;
+
+	transition: box-shadow ease-in-out .25s;
+}
+.photo-wrapper:active {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+	cursor: grabbing;
+}
+.photo-wrapper > .photo {
+	user-select: none;
+	pointer-events: none;
+
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+
+	background-clip: content-box;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	filter: blur(1px) sepia(.65);
+
+	transition: filter ease-in-out .25s;
+}
+.photo-wrapper:active > .photo {
+	filter: blur(0);
+}
+
+
+main {
+	&:extend(.fixed-parent);
+	z-index: 1;
+	pointer-events: none;
+
+	width: 100vw;
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main p {
+	font-size: 5vh;
+	user-select: none;
+	text-shadow: 0 0 20px black;
+
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(2, 10, 48, 0.6);
+}
