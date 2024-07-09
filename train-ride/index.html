@@ -8,9 +8,6 @@
         <link rel="stylesheet" href="../fonts.css">
         <link rel="stylesheet" href="style/main.css">
         <link rel="stylesheet" href="style/keyframes.css">
-
-        <script src="js/follow-pointer.js"></script>
-        <script src="js/tooltip.js"></script>
     </head>
     <body>
         <!--Keep on top-->
@@ -31,11 +28,11 @@
                         <img class="" alt="Could not load image"
                              src="assets/scene/train.png" style="height: inherit;">
                         <img class="selectable" data-tooltip-text="It's a Kuromi tote bag"
-                             src="assets/scene/tote-bag.png" style="height: 2.5pc; top: 170px; left: 96px">
+                             src="assets/scene/tote-bag.png" style="height: 1.5pc; top: 98px; left: 66px">
                         <img class="selectable" data-tooltip-text="It's a backpack someone left here... what an idiot."
-                             src="assets/scene/backpack.png" style="height: 2.5pc; top: 204px; left: 200px">
+                             src="assets/scene/backpack.png" style="height: 1.5pc; top: 120px; left: 126px">
                         <img class="selectable" data-tooltip-text="Why would someone even charge their phone on the train?"
-                             src="assets/scene/phone.png" style="height: 2.3pc; top: 238px; left: 539px">
+                             src="assets/scene/phone.png" style="height: 1.3pc; top: 140px; left: 326px">
                     </div>
                     <div class="scene train-car-scene">
                         <img class="" alt="Could not load image"
@@ -44,7 +41,7 @@
                 </div>
                 <div class="scene horizontal-repeating-background"
                     style="background-image: url('assets/scene/tracks-2x.gif');
-                    margin-top: -80px; width: 100%; height: 150px;
+                    margin-top: -60px; width: 100%; height: 120px;
                    	filter: brightness(40%) contrast(90%);"></div>
             </div>
         </main>
@@ -54,5 +51,11 @@
                 Testing
             </div>
         </div>
+
+        <script src="js/follow-pointer.js"></script>
+        <script src="js/tooltip.js"></script>
+        <script>
+            followPointer(document.getElementById("tooltip"));
+        </script>
     </body>
 </html>

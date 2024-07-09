@@ -8,4 +8,3 @@ document.querySelectorAll(".scene img.selectable").forEach((e) => {
 })
 
 
-followPointer(document.getElementById("tooltip"));
