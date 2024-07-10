@@ -68,8 +68,9 @@ main {
   overflow: hidden;
 }
 #train-scene-container {
-  gap: -30px;
+  min-width: 100vw;
   justify-content: center;
+  gap: 10px;
 }
 .scene {
   z-index: 1;
