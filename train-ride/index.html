@@ -18,6 +18,9 @@
                 testing
                 per andare alla prossima pagina <a href="../photos/index.html">clicca qui</a>
             </p>
+
+            <a id="subway-surfers-video-toggle" onclick="toggle_subway_surfers_video()"></a>
+
             <div class="scene-container">
                 <div id="train-scene-container" class="h-stack">
                     <div class="scene train-car-scene"></div>
@@ -51,8 +54,11 @@
             </div>
         </div>
 
+        <video id="subway-surfers-video" src="assets/subway-surfers.mp4"></video>
+
         <script src="js/follow-pointer.js"></script>
         <script src="js/tooltip.js"></script>
+        <script src="js/main.js"></script>
         <script>
             followPointer(document.getElementById("tooltip"));
         </script>
