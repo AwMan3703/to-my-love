@@ -89,6 +89,20 @@ main p {
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 }
+#train-scene-container .train-car-scene:first-child,
+#train-scene-container .train-car-scene:last-child {
+	width: 100%;
+	background-image: url("../assets/scene/train.png");
+	background-repeat: repeat-x;
+	background-size: contain;
+}
+#train-scene-container .train-car-scene:first-child {
+	background-position: right center;
+}
+#train-scene-container .train-car-scene:last-child {
+	background-position: left center;
+}
+
 .scene img {
 	&:extend(.fixed-child);
 	&:extend(.no-antialiasing);
@@ -98,6 +112,7 @@ img.selectable:hover {
 	&:extend(.selected);
 	cursor: help;
 }
+:has(img.selectable:hover) .train-car-scene:not(:hover),
 :has(img.selectable:hover) img:not(:hover) {
 	filter: brightness(40%) contrast(90%);
 }
@@ -121,6 +136,7 @@ img.selectable:hover {
 	background-repeat: repeat-x;
 	background-size: contain;
 }
+
 
 #tooltip-level {
 	&:extend(.fixed-parent);
