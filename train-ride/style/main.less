@@ -10,6 +10,10 @@ body {
 
 	background-color: #16161e;
 	background-image: linear-gradient(180deg, rgba(188, 220, 241, .1) 0%, rgba(188, 220, 241, .01) 30%, transparent 100%);
+
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	grid-template-rows: 1fr;
 }
 #background-grid {
 	&:extend(.fixed-parent);
@@ -55,11 +59,13 @@ main {
 	&:extend(.v-stack);
 	height: 100%;
 	gap: 10%;
+	overflow: hidden;
 	align-items: center;
 	justify-content: space-around;
 }
 main p {
 	&:extend(.glow);
+	margin-inline: 15%;
 }
 
 .scene-container {
@@ -82,7 +88,7 @@ main p {
 	align-items: center;
 	min-width: 468px;
 	height: 224px;
-	margin-inline: -25px;
+	margin-inline: -20px;
 
 	animation-name: train-movement;
 	animation-duration: 0.7s;
@@ -116,6 +122,36 @@ img.selectable:hover {
 :has(img.selectable:hover) img:not(:hover) {
 	filter: brightness(40%) contrast(90%);
 }
+
+
+#subway-surfers-video {
+	width: 0;
+	height: 100%;
+	z-index: 5;
+
+	grid-column: 2;
+	max-height: 100vh;
+
+	transition: right .5s ease-in-out;
+}
+#subway-surfers-video.open {
+	width: 100%;
+}
+#subway-surfers-video-toggle {
+	&:extend(button);
+	cursor: pointer;
+	font-size: 0.75rem;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: rgba(85, 100, 172, 0.6);
+}
+#subway-surfers-video-toggle:not(.open)::before {
+	content: 'È troppo da leggere non riesco a concentrarmi :(((';
+}
+#subway-surfers-video-toggle.open::before {
+	content: 'okay basta';
+}
+
 
 .glow {
 	filter: drop-shadow(0 0 10px rgb(147, 223, 255));
