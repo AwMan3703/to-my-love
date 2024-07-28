@@ -158,6 +158,7 @@ img.selectable:hover {
 
 	transition: opacity .2s ease, translate .2s ease;
 
+	color: rgba(255, 255, 255, 0.5);
 	font-family: "Standard Bitmap", monospace;
 
 	max-width: 30pc;
@@ -166,6 +167,9 @@ img.selectable:hover {
 	padding: 10px;
 	border: solid 5px #212039;
 	border-radius: 10px;
+}
+#tooltip:first-line {
+	color: white;
 }
 :has(img.selectable:hover) #tooltip {
 	opacity: 1;
