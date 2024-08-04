@@ -9,8 +9,8 @@ function _new_photo(url) {
     const wrapper = document.createElement('div')
     wrapper.classList.add('photo-wrapper')
     wrapper.style.rotate = `${randInt(-10, 10)}deg`
-    wrapper.style.left = `${randInt(-100, visualViewport.width)}px`
-    wrapper.style.top = `${randInt(-100, visualViewport.height)}px`
+    wrapper.style.left = `${randInt(-275, visualViewport.width-200)}px`
+    wrapper.style.top = `${randInt(-275, visualViewport.height-200)}px`
     wrapper.appendChild(image)
 
     wrapper.onmousedown = _ => {
