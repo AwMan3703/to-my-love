@@ -1,0 +1,14 @@
+@keyframes background-animation {
+  from {
+    background-position: center bottom;
+  }
+  to {
+    background-position: center top;
+  }
+}
+@keyframes fly-up {
+  to {
+    translate: 0 20px;
+  }
+}
+/*# sourceMappingURL=keyframes.css.map */

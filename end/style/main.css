@@ -1,0 +1,57 @@
+@keyframes background-animation {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}
+@keyframes pixel-heart {
+  from {
+    display: initial;
+    translate: 0 0;
+    transform: scale(1);
+  }
+  to {
+    display: none;
+    translate: 0 -200%;
+    transform: scale(0.5);
+    opacity: 50%;
+  }
+}
+body {
+  min-height: 100lvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/heart.png");
+  background-size: 50px;
+  animation: background-animation 30s linear infinite;
+}
+img#pixel-heart-gif {
+  width: 2.5%;
+}
+img#us-gif {
+  width: 15%;
+}
+.no-antialiasing,
+.pixel-heart {
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;
+  /* Universal support since 2021 */
+  image-rendering: optimize-contrast;
+  /* CSS3 Proposed */
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE8+ */
+}
+.pixel-heart {
+  animation: pixel-heart 1.1s infinite ease-in-out;
+}
+/*# sourceMappingURL=main.css.map */
