@@ -1,0 +1,53 @@
+@keyframes rotate-y {
+  from {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rainbow_flat-color {
+  from {
+    --rainbow-color: red;
+  }
+  16% {
+    --rainbow-color: orange;
+  }
+  24% {
+    --rainbow-color: yellow;
+  }
+  32% {
+    --rainbow-color: lime;
+  }
+  40% {
+    --rainbow-color: green;
+  }
+  48% {
+    --rainbow-color: aquamarine;
+  }
+  56% {
+    --rainbow-color: cyan;
+  }
+  64% {
+    --rainbow-color: blue;
+  }
+  72% {
+    --rainbow-color: darkblue;
+  }
+  80% {
+    --rainbow-color: indigo;
+  }
+  88% {
+    --rainbow-color: purple;
+  }
+  96% {
+    --rainbow-color: magenta;
+  }
+  to {
+    --rainbow-color: red;
+  }
+}
+/*# sourceMappingURL=animations.css.map */

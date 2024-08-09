@@ -1,69 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
-        <title>To my love</title>
-        <link rel="shortcut icon" href="index/assets/favicon.ico" type="image/x-icon">
+	<head>
+		<meta charset="UTF-8">
+		<title>Hepi bifday</title>
 
-        <link rel="stylesheet" href="fonts.css">
-        <link rel="stylesheet" type="text/css" href="index/style/main.css">
-        <link rel="stylesheet" href="index/style/keyframes.css">
-    </head>
-    <body>
-        <!--Light-up background-->
-        <div id="light-up"></div>
+		<link rel="stylesheet" href="_index/style/main.css">
+		<link rel="stylesheet" href="_index/style/animations.css">
+	</head>
+	<body class="prestart">
+		<img id="start" src="_index/assets/clickme.png">
 
-        <!--Rendering level for particles-->
-        <div id="particle-level"></div>
+		<audio id="audio" src="_index/assets/silly.mp3" autoplay loop></audio>
 
-        <!--Keep this on top-->
-        <div id="randomEnvelope-envelopeWrapper" style="visibility: hidden">
-            <div id="randomEnvelope-envelope" style="transform: translateY(300%)">
-                <div id="randomEnvelope-level-back">
-                    <img id="randomEnvelope-inside" src="index/assets/envelope1/inside.png" alt="letter could not be loaded :(">
-                </div>
+		<h1 id="main-title">Buon Compleanno!!1!</h1>
+		<p>Ti amoooOoooOOooOOOooOOooOOoOooOO<a href="envelope/index.html">O</a>OoooO</p>
+		<br>
+		<br>
+		<img id="main-gif" class="rotating-image" style="animation-delay: -1s" src="_index/assets/dance.gif">
 
-                <div id="letter">
-                    <iframe id="letter-frame" src="letter/index.html"></iframe>
-                    <div id="letter-overlay"></div>
-                </div>
-
-                <div id="randomEnvelope-level-front">
-                    <img id="randomEnvelope-body" src="index/assets/envelope1/body.png">
-                    <img id="randomEnvelope-flap" src="index/assets/envelope1/flap.png">
-                    <img id="randomEnvelope-front" src="index/assets/envelope1/front.png">
-                    <img id="randomEnvelope-stamps" src="index/assets/stamps/1.png" style="mix-blend-mode: multiply">
-                </div>
-            </div>
-        </div>
-        <!-------------------->
-
-        <!--Error screen-->
-        <div id="fetch-error">
-            <div id="fetch-error-header">
-                <img id="fetch-error-image" src="index/assets/fetch-error.png" alt="ERROR">
-                <hr>
-            </div>
-            <div id="fetch-error-details">
-                <h3 id="fetch-error-title">An error occurred!</h3>
-                <p id="fetch-error-description"></p>
-            </div>
-            <div id="fetch-error-diagnosis">
-                <h3 id="fetch-error-diagnosis-title">What may have caused this:</h3>
-                <ul id="fetch-error-diagnosis-list"></ul>
-            </div>
-        </div>
-
-        <!--Loading screen-->
-        <div id="loading-widget" class="displayed">
-            <p>Loading...</p>
-        </div>
-
-        <script src="index/js/utility.js"></script>
-        <script src="index/js/fetcher.js"></script>
-        <script src="index/js/particles.js"></script>
-        <script src="index/js/envelopeAnimator.js"></script>
-        <script src="index/js/envelopeRandomizer.js"></script>
-    </body>
+		<script src="_index/js/main.js"></script>
+	</body>
 </html>

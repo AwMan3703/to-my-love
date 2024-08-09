@@ -58,7 +58,7 @@ body {
 main {
 	&:extend(.v-stack);
 	height: 100%;
-	gap: 10%;
+	gap: 1%;
 	overflow: hidden;
 	align-items: center;
 	justify-content: space-around;
@@ -197,6 +197,7 @@ img.selectable:hover {
 
 	color: rgba(255, 255, 255, 0.5);
 	font-family: "Standard Bitmap", monospace;
+	font-weight: 100;
 
 	max-width: 30pc;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -207,6 +208,7 @@ img.selectable:hover {
 }
 #tooltip:first-line {
 	color: white;
+	font-weight: bold;
 }
 :has(img.selectable:hover) #tooltip {
 	opacity: 1;

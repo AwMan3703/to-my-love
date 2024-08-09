@@ -1,0 +1,77 @@
+/* CSS resets */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: 0;
+  text-align: center;
+}
+audio {
+  display: none;
+}
+/* Styles */
+body.prestart *:not(#start) {
+  display: none;
+}
+body.prestart {
+  background-color: white;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-color: var(--rainbow-color);
+  transition: background-color 0.2s linear;
+  animation-name: rainbow_flat-color;
+  -webkit-animation-name: rainbow_flat-color;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+}
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+#main-title,
+p {
+  --bg: #ff00ff;
+  color: var(--rainbow-color);
+  text-shadow: 1px 0 #fff, /* Text Stroke right */ -1px 0 #fff, /* Text Stroke left */ 0 1px #fff, /* Text Stroke bottom */ 0 -1px #fff, /* Text Stroke top */ 5px 5px 5px #000000;
+  /* Actual shadow */
+  transition: color 0.2s ease-in-out;
+  animation-name: rainbow_flat-color;
+  -webkit-animation-name: rainbow_flat-color;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+}
+#main-gif {
+  width: 25%;
+  box-shadow: 10px 15px 15px black;
+  z-index: 100;
+}
+.rotating-image {
+  rotate: 25deg x;
+  perspective: 100px;
+  transition: transform 0.2s linear;
+  animation-name: rotate-y;
+  -webkit-animation-name: rotate-y;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Autography';
+  src: url("_fonts/Autography.otf");
+}
+@font-face {
+  font-family: 'Avelire';
+  src: url("_fonts/AVELIRE.otf");
+}
+@font-face {
+  font-family: 'Greek Rolls';
+  src: url("_fonts/GreekRollsRegular.ttf");
+}
+@font-face {
+  font-family: 'Ice Cream';
+  src: url("_fonts/IceCream.otf");
+}
+@font-face {
+  font-family: 'King Share';
+  src: url("_fonts/Kingshare.otf");
+}
+@font-face {
+  font-family: 'Pisang Lagi';
+  src: url("_fonts/PisangLagi.otf");
+}
+@font-face {
+  font-family: 'Berkelium';
+  src: url("_fonts/berkelium-bitmap.ttf");
+}
+@font-face {
+  font-family: 'Standard Bitmap';
+  src: url("_fonts/AddStandardBitmap.ttf");
+}
+@font-face {
+  font-family: 'WebPixel';
+  src: url("_fonts/webpixel bitmap_medium.otf");
+}
+body {
+  margin: 0;
+  height: 100lvh;
+  font-family: "Pisang Lagi";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  text-align: center;
+  max-width: 80%;
+}
+a {
+  cursor: pointer;
+  color: darkblue;
+  text-decoration: underline;
+}
+canvas#rose-canvas {
+  width: 50%;
+  border-radius: 30px;
+}
+/*# sourceMappingURL=main.css.map */

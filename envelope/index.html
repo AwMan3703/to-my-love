@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <title>To my love</title>
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../fonts.css">
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <link rel="stylesheet" href="style/keyframes.css">
+    </head>
+    <body>
+        <!--Light-up background-->
+        <div id="light-up"></div>
+
+        <!--Rendering level for particles-->
+        <div id="particle-level"></div>
+
+        <!--Keep this on top-->
+        <div id="randomEnvelope-envelopeWrapper" style="visibility: hidden">
+            <div id="randomEnvelope-envelope" style="transform: translateY(300%)">
+                <div id="randomEnvelope-level-back">
+                    <img id="randomEnvelope-inside" src="assets/envelope1/inside.png" alt="letter could not be loaded :(">
+                </div>
+
+                <div id="letter">
+                    <iframe id="letter-frame" src="../letter/index.html"></iframe>
+                    <div id="letter-overlay"></div>
+                </div>
+
+                <div id="randomEnvelope-level-front">
+                    <img id="randomEnvelope-body" src="assets/envelope1/body.png">
+                    <img id="randomEnvelope-flap" src="assets/envelope1/flap.png">
+                    <img id="randomEnvelope-front" src="assets/envelope1/front.png">
+                    <img id="randomEnvelope-stamps" src="assets/stamps/1.png" style="mix-blend-mode: multiply">
+                </div>
+            </div>
+        </div>
+        <!-------------------->
+
+        <!--Error screen-->
+        <div id="fetch-error">
+            <div id="fetch-error-header">
+                <img id="fetch-error-image" src="assets/fetch-error.png" alt="ERROR">
+                <hr>
+            </div>
+            <div id="fetch-error-details">
+                <h3 id="fetch-error-title">An error occurred!</h3>
+                <p id="fetch-error-description"></p>
+            </div>
+            <div id="fetch-error-diagnosis">
+                <h3 id="fetch-error-diagnosis-title">What may have caused this:</h3>
+                <ul id="fetch-error-diagnosis-list"></ul>
+            </div>
+        </div>
+
+        <!--Loading screen-->
+        <div id="loading-widget" class="displayed">
+            <p>Loading...</p>
+        </div>
+
+        <script src="js/utility.js"></script>
+        <script src="js/fetcher.js"></script>
+        <script src="js/particles.js"></script>
+        <script src="js/envelopeAnimator.js"></script>
+        <script src="js/envelopeRandomizer.js"></script>
+    </body>
+</html>
