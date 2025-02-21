@@ -74,10 +74,12 @@ function update_relationship_counters() {
     }
 }
 
+/* We broke up rip...
 // Run it the first time
 update_relationship_counters()
 // Then schedule it on an interval
 setInterval(update_relationship_counters, 1000)
+ */
 
 // Remove the scroll arrow and gradient when the user scrolls
 document.addEventListener('scroll', () => {
